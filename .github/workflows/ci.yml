@@ -26,13 +26,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # 👉 ICI : c’est cette ligne qui était fausse avant
       - name: Build Angular app
-        run: npm run build --configuration production  # ✅ correct
+        run: npm run build -- --configuration production
 
       - name: Upload dist folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/angular-cicd  # ✅ selon ton angular.json
+          path: dist/angular-cicd  # ✅ correspond à ton angular.json
 
   deploy:
     environment:
