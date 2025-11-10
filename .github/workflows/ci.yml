@@ -32,7 +32,7 @@ jobs:
       - name: Upload dist folder
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/todolist  # ✅ correspond à ton dossier de build
+          path: dist/todolist/browser  # ✅ correspond à ton dossier de build
 
   deploy:
     environment:
